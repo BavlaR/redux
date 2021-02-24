@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import { userData, UserDataContext } from './context';
 import Header from './Header';
 
-const App = () => {
-   const [userInfo, setUserInfo] = useState(userData);
+class App extends Component {
+   state = {
+      userInfo: userData,
+   };
 
-   return (
-      <div className="page">
-         <UserDataContext.Provider value={userInfo}>
-            <Header />
-         </UserDataContext.Provider>
-      </div>
-   );
-};
+   render() {
+      return (
+         <div className="page">
+            <UserDataContext.Provider value={this.state.userInfo}>
+               <Header />
+            </UserDataContext.Provider>
+         </div>
+      );
+   }
+}
 export default App;
