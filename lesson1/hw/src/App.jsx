@@ -4,15 +4,13 @@ import Header from './Header';
 
 const App = () => {
    const [userData, setUserData] = useState({
-      userData: {
-         name: 'Nikola Tesla',
-         avatar_url: 'https://avatars3.githubusercontent.com/u10001',
-      },
+      name: 'Nikola Tesla',
+      avatar_url: 'https://avatars3.githubusercontent.com/u10001',
    });
 
    return (
       <div className="page">
-         <UserDataContext.Provider value={userData.userData}>
+         <UserDataContext.Provider value={userData}>
             <Header />
          </UserDataContext.Provider>
       </div>
