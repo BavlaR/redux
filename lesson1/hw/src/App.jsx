@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { user, UserDataContext } from './context';
+import { UserDataContext } from './context';
 import Header from './Header';
 
 class App extends Component {
    state = {
-      userData: user,
+      userData: {
+         name: 'Nikola Tesla',
+         avatar_url: 'https://avatars3.githubusercontent.com/u10001',
+      },
    };
 
    render() {
@@ -17,4 +20,5 @@ class App extends Component {
       );
    }
 }
+
 export default App;

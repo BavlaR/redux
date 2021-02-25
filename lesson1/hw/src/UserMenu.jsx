@@ -6,7 +6,7 @@ class UserMenu extends Component {
       return (
          <div className="menu">
             <span className="menu__greeting">Hello, {this.context.name}</span>
-            <img alt="User Avatar" src={this.context.avatar_url} className="menu_avatar" />
+            <img alt="User Avatar" src={this.context.avatar_url} className="menu__avatar" />
          </div>
       );
    }
