@@ -10,7 +10,12 @@ const counterReducer = (state = 0, action) => {
          return state + 1;
       case 'COUNTER/DECREMENT':
          return state - 1;
+      default:
+         return state;
    }
 };
 
 const store = createStore(counterReducer);
+
+store.dispatch(increment());
+store.dispatch(decrement());
