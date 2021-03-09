@@ -1,11 +1,10 @@
 import { createStore, combineReducers } from 'redux';
 import usersReducer from './users/users.reducer';
-import pageReducer from './users/page.reducer';
+import filterReducer from './users/filter.reducer';
 
 const reducer = combineReducers({
    usersList: usersReducer,
-   currentPage: pageReducer,
+   filterText: filterReducer,
 });
-const store = createStore(reducer);
 
-export default store;
+export default createStore(reducer);
